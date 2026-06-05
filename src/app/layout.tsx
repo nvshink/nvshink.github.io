@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
-import { Footer } from "@/components/layout/Footer";
+import { Cascadia_Code, Elms_Sans, Playwrite_DK_Uloopet } from "next/font/google";
+import { CursorMount } from "@/components/cursor";
 import { Header } from "@/components/layout/Header";
 import { assetPath } from "@/lib/asset-path";
 import "./globals.css";
+
+const headingFont = Playwrite_DK_Uloopet({
+  variable: "--font-heading-script",
+  display: "swap",
+});
+
+const bodyFont = Elms_Sans({
+  variable: "--font-body-sans",
+  display: "swap",
+});
+
+const monoFont = Cascadia_Code({
+  variable: "--font-code-mono",
+  display: "swap",
+});
 
 const siteTitle = "nvshink | Kotlin Multiplatform Developer";
 const siteDescription =
@@ -49,12 +65,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}
+    >
       <body>
+        <CursorMount />
         <div className="site-shell">
           <Header />
           <div className="flex-1">{children}</div>
-          <Footer />
         </div>
       </body>
     </html>

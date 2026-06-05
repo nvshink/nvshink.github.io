@@ -6,7 +6,6 @@ export const profile: DeveloperProfile = {
   role: "Kotlin Multiplatform Developer",
   summary:
     "I design cross-platform products, local-first workflows and reusable Kotlin libraries for Android and desktop.",
-  location: "Omsk, Russia",
   about: [
     "I focus on Kotlin Multiplatform as a practical way to share domain logic, keep product quality high and avoid fragmented architecture between platforms.",
     "My strongest background is Android, but I also care about desktop tooling, local storage, synchronization and developer experience in internal libraries.",

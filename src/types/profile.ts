@@ -11,7 +11,6 @@ export interface DeveloperProfile {
   handle: string;
   role: string;
   summary: string;
-  location: string;
   about: string[];
   technologies: string[];
   socials: SocialLink[];
