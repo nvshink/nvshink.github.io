@@ -47,13 +47,77 @@ export default function HomePage() {
                     <div
                         className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8">
                         <p className="font-script text-3xl leading-none text-[color:var(--accent)]">
-                            Key technologies
+                            Programing Languages
                         </p>
                         <ul className="mt-5 flex flex-wrap gap-3">
-                            {profile.technologies.map((technology) => (
+                            {profile.programLanguages.map((technology) => (
                                 <li
                                     key={technology}
                                     className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--foreground)]"
+                                >
+                                    {technology}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div
+                        className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8">
+                        <p className="font-script text-3xl leading-none text-[color:var(--accent)]">
+                            Mobile stack
+                        </p>
+                        <ul className="mt-5 flex flex-wrap gap-3">
+                            {profile.mobileTools.map((technology) => (
+                                <li
+                                    key={technology}
+                                    className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--foreground)]"
+                                >
+                                    {technology}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div
+                        className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8">
+                        <p className="font-script text-3xl leading-none text-[color:var(--accent)]">
+                            Backend stack
+                        </p>
+                        <ul className="mt-5 flex flex-wrap gap-3">
+                            {profile.backendTools.map((technology) => (
+                                <li
+                                    key={technology}
+                                    className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--foreground)]"
+                                >
+                                    {technology}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div
+                        className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8">
+                        <p className="font-script text-3xl leading-none text-[color:var(--accent)]">
+                            Architecture
+                        </p>
+                        <ul className="mt-5 flex flex-wrap gap-3">
+                            {profile.architecture.map((technology) => (
+                                <li
+                                    key={technology}
+                                    className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--foreground)]"
+                                >
+                                    {technology}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div
+                        className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8">
+                        <p className="font-script text-3xl leading-none text-[color:var(--accent)]">
+                            Language
+                        </p>
+                        <ul className="mt-5 flex flex-wrap gap-3">
+                            {profile.languages.map((technology) => (
+                                <li
+                                    key={technology}
+                                    className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--foreground)]"
                                 >
                                     {technology}
                                 </li>

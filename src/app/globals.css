@@ -93,6 +93,13 @@ a {
   flex-direction: column;
 }
 
+.joypixels {
+  height: 1em;
+  width: 1em;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
 @keyframes cursor-spiral-spin {
   from {
     transform: rotate(0deg);

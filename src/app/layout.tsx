@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cascadia_Code, Elms_Sans, Playwrite_DK_Uloopet } from "next/font/google";
 import { CursorMount } from "@/components/cursor";
+import { EmojiReplacer } from "@/components/EmojiReplacer";
 import { Header } from "@/components/layout/Header";
 import { assetPath } from "@/lib/asset-path";
 import "./globals.css";
@@ -70,6 +71,7 @@ export default function RootLayout({
       className={`${headingFont.variable} ${bodyFont.variable} ${monoFont.variable}`}
     >
       <body>
+        <EmojiReplacer />
         <CursorMount />
         <div className="site-shell">
           <Header />

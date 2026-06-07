@@ -3,7 +3,7 @@ import type { DeveloperProfile } from "@/types/profile";
 export const profile: DeveloperProfile = {
   name: "nvshink",
   handle: "@nvshink",
-  role: "Kotlin Multiplatform Developer",
+  role: "Android & KMP developer",
   summary:
     "I design cross-platform products, local-first workflows and reusable Kotlin libraries for Android and desktop.",
   about: [
@@ -11,16 +11,35 @@ export const profile: DeveloperProfile = {
     "My strongest background is Android, but I also care about desktop tooling, local storage, synchronization and developer experience in internal libraries.",
     "I like products with clear mechanics: offline-first notes, technical utilities, productivity tools and infrastructure that stays maintainable as the codebase grows.",
   ],
-  technologies: [
-    "Kotlin Multiplatform",
-    "Compose Multiplatform",
+  programLanguages: [
+    "Kotlin",
+    "Java",
+    "SQL",
+  ],
+  languages: [
+      "🇬🇧English - B2"
+  ],
+  architecture: [
+    "MVVM",
+    "MVI",
+    "Clean Architecture",
+    "Microservices"
+  ],
+  mobileTools: [
+    "Jetpack Compose",
     "Android SDK",
+    "Kotlin Multiplatform",
+    "Room",
+    "Hilt",
     "Coroutines",
-    "Ktor",
-    "SQLDelight",
-    "SQLite",
-    "TypeScript",
-    "Electron",
+    "Flow",
+    "Navigation 3"
+  ],
+  backendTools: [
+      "Ktor",
+      "OkHttp",
+      "REST API",
+      "WebSocket"
   ],
   socials: [
     {

@@ -12,6 +12,10 @@ export interface DeveloperProfile {
   role: string;
   summary: string;
   about: string[];
-  technologies: string[];
+  programLanguages: string[];
+  languages: string[];
+  architecture: string[];
+  mobileTools: string[];
+  backendTools: string[];
   socials: SocialLink[];
 }
