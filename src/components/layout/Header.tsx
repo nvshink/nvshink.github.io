@@ -1,7 +1,9 @@
+import { assetPath } from "@/lib/asset-path";
+
 const navigationItems = [
-  { href: "#applications", label: "Applications" },
-  { href: "#libraries", label: "Libraries" },
-  { href: "#about", label: "About" },
+  { href: "/#applications", label: "Applications" },
+  { href: "/#libraries", label: "Libraries" },
+  { href: "/#about", label: "About" },
 ];
 
 export function Header() {
@@ -9,7 +11,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-white/50 bg-[color:var(--background)]/88 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
         <a
-          href="#top"
+          href={assetPath("/#top")}
           className="font-script text-3xl leading-none text-[color:var(--accent)] transition hover:text-[color:var(--foreground)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--accent)]"
         >
           nvshink
@@ -19,7 +21,7 @@ export function Header() {
             {navigationItems.map((item) => (
               <li key={item.href}>
                 <a
-                  href={item.href}
+                  href={assetPath(item.href)}
                   className="rounded-full px-3 py-2 transition hover:bg-white/70 hover:text-[color:var(--foreground)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--accent)]"
                 >
                   {item.label}

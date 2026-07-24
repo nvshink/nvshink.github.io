@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { PlatformBadges } from "@/components/projects/PlatformBadges";
 import { ProjectLinks } from "@/components/projects/ProjectLinks";
 import { ProjectTechStack } from "@/components/projects/ProjectTechStack";
+import { HorizonScreensCarousel } from "@/components/projects/HorizonScreensCarousel";
 import { projects } from "@/content/projects";
 
 type ProjectPageProps = {
@@ -24,8 +25,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="rounded-[2rem] border border-[color:var(--border)] bg-white/85 p-8 shadow-[0_24px_70px_rgba(23,23,23,0.08)] sm:p-10">
+    <main className={`mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8 ${project.slug === "horizon" ? "horizon-theme" : ""}`}>
+      <div className="rounded-[2rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-8 shadow-[0_24px_70px_rgba(92,43,13,0.12)] sm:p-10">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[color:var(--accent)]">
           {project.category === "application" ? "Application" : "Library"}
         </p>
@@ -44,17 +45,30 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       <section className="mt-10 grid gap-6 lg:grid-cols-[0.7fr_1.3fr]">
         <aside className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[color:var(--accent)]">
-            Highlights
-          </p>
-          <ul className="mt-5 space-y-3 text-sm leading-7 text-[color:var(--muted)]">
-            {project.highlights.map((highlight) => (
-              <li key={highlight} className="rounded-2xl bg-[color:var(--background)] px-4 py-3">
-                {highlight}
-              </li>
-            ))}
-          </ul>
-          {project.codeSample ? (
+          {project.slug === "horizon" ? (
+            <>
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[color:var(--accent)]">
+                App screens
+              </p>
+              <div className="mt-5">
+                <HorizonScreensCarousel />
+              </div>
+            </>
+          ) : (
+            <>
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[color:var(--accent)]">
+                Highlights
+              </p>
+              <ul className="mt-5 space-y-3 text-sm leading-7 text-[color:var(--muted)]">
+                {project.highlights.map((highlight) => (
+                  <li key={highlight} className="rounded-2xl bg-[color:var(--background)] px-4 py-3">
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          {project.slug !== "horizon" && project.codeSample ? (
             <div className="mt-6 rounded-[1.4rem] bg-[#131722] p-4 font-mono text-sm leading-7 text-[#d6e2ff]">
               <p className="text-xs uppercase tracking-[0.18em] text-[#7c8db4]">
                 Code sample
@@ -69,7 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           {project.sections.map((section) => (
             <section
               key={section.title}
-              className="rounded-[1.75rem] border border-[color:var(--border)] bg-white p-6 shadow-[0_18px_50px_rgba(23,23,23,0.06)]"
+              className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 shadow-[0_18px_50px_rgba(92,43,13,0.08)]"
             >
               <h2 className="text-2xl font-semibold tracking-tight text-[color:var(--foreground)]">
                 {section.title}

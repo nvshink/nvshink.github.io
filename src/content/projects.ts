@@ -68,11 +68,15 @@ export const projects: PortfolioProject[] = [
     stack: ["Kotlin", "Android SDK", "Sensors API", "Jetpack Compose"],
     platforms: ["Android"],
     links: [
-      { type: "github", label: "Source", href: "https://github.com/nvshink" },
+      {
+        type: "store",
+        label: "Open in Google Play",
+        href: "https://play.google.com/store/apps/details?id=io.github.nvshink.horizon",
+      },
     ],
     renderer: "horizon",
     featured: true,
-    status: "Utility app prototype",
+    status: "",
     highlights: [
       "Compass heading and angle visualization",
       "Lean UI designed around precise readings",
@@ -121,11 +125,6 @@ export const projects: PortfolioProject[] = [
         type: "github",
         label: "GitHub",
         href: "https://github.com/nvshink/luma-compose",
-      },
-      {
-        type: "docs",
-        label: "README",
-        href: "https://github.com/nvshink/luma-compose#readme",
       },
     ],
     renderer: "default-library",

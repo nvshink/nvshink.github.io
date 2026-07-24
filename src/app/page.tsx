@@ -7,6 +7,7 @@ import {
     libraryProjects,
 } from "@/content/projects";
 import {profile} from "@/content/profile";
+import {assetPath} from "@/lib/asset-path";
 
 export default function HomePage() {
     return (
@@ -55,7 +56,16 @@ export default function HomePage() {
                                     key={technology}
                                     className="rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--foreground)]"
                                 >
-                                    {technology}
+                                    {technology.startsWith("🇬🇧") ? (
+                                        <>
+                                            <img
+                                                src={assetPath("/images/flags/flag-for-flag-united-kingdom-svgrepo-com.svg")}
+                                                alt="United Kingdom flag"
+                                                className="joypixels h-[1em] w-[1em] object-contain"
+                                            />
+                                            {technology.replace(/^🇬🇧/, "")}
+                                        </>
+                                    ) : technology}
                                 </li>
                             ))}
                         </ul>

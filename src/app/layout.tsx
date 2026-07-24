@@ -19,6 +19,7 @@ const bodyFont = Elms_Sans({
 const monoFont = Cascadia_Code({
   variable: "--font-code-mono",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 const siteTitle = "nvshink | Kotlin Multiplatform Developer";

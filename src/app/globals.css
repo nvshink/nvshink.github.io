@@ -10,6 +10,38 @@
   --accent-soft: #edf6fe;
 }
 
+.horizon-theme,
+.horizon-theme-block {
+  --background: #FFF8F5;
+  --foreground: #5c2b0d;
+  --muted: #7d523e;
+  --border: #dfad92;
+  --surface: #fffaf6;
+  --accent: #a65309;
+  --accent-soft: #fde9e3;
+}
+
+body:has(main.horizon-theme) {
+  --background: #FFF8F5;
+  --foreground: #5c2b0d;
+  --muted: #7d523e;
+  --border: #dfad92;
+  --surface: #fffaf6;
+  --accent: #a65309;
+  --accent-soft: #fde9e3;
+  background:
+    radial-gradient(circle at top, rgba(166, 83, 9, 0.09), transparent 30%),
+    linear-gradient(135deg, rgba(166, 83, 9, 0.035) 0, rgba(166, 83, 9, 0.035) 1px, transparent 1px, transparent 12px),
+    linear-gradient(45deg, rgba(92, 43, 13, 0.018) 0, rgba(92, 43, 13, 0.018) 1px, transparent 1px, transparent 14px),
+    linear-gradient(180deg, #fff0ec 0%, #FFF8F5 52%, #fff2ee 100%);
+}
+
+body:has(main.horizon-theme)::before {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 250, 246, 0.8) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(0deg, rgba(92, 43, 13, 0.05) 0 1px, transparent 1px 5px);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

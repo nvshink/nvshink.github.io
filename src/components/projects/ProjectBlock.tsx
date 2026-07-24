@@ -14,10 +14,12 @@ export function ProjectBlock({ project }: ProjectBlockProps) {
   }
 
   return (
-    <article className="group">
+    <article className={`group ${project.slug === "horizon" ? "horizon-theme-block" : ""}`}>
       <Renderer project={project} />
       <div className="mt-5 flex items-center justify-between gap-4">
-        <p className="text-sm text-[color:var(--muted)]">{project.status}</p>
+        {project.status && project.renderer !== "default-library" && (
+          <p className="text-sm text-[color:var(--muted)]">{project.status}</p>
+        )}
         <Link
           href={`/projects/${project.slug}`}
           className="inline-flex items-center gap-2 text-sm font-semibold text-[color:var(--foreground)] transition hover:text-[color:var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--accent)]"
