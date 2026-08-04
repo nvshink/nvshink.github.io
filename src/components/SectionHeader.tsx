@@ -1,7 +1,7 @@
 type SectionHeaderProps = {
   eyebrow: string;
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
 };
 
 export function SectionHeader({
@@ -14,12 +14,16 @@ export function SectionHeader({
       <p className="font-script text-3xl leading-none text-[color:var(--accent)]">
         {eyebrow}
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[color:var(--foreground)] sm:text-4xl">
-        {title}
-      </h2>
-      <p className="mt-4 text-base leading-8 text-[color:var(--muted)] sm:text-lg">
-        {description}
-      </p>
+      {title && (
+        <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[color:var(--foreground)] sm:text-4xl">
+          {title}
+        </h2>
+      )}
+      {description && (
+        <p className="mt-4 text-base leading-8 text-[color:var(--muted)] sm:text-lg">
+          {description}
+        </p>
+      )}
     </div>
   );
 }

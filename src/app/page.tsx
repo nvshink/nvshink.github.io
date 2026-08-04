@@ -11,9 +11,10 @@ import {assetPath} from "@/lib/asset-path";
 
 export default function HomePage() {
     return (
-        <main id="top">
+        <main id="top" className="flex flex-col">
             <section
-                className="mx-auto grid w-full max-w-7xl gap-12 px-4 pb-18 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-24 lg:pt-20">
+                id="contacts"
+                className="order-1 mx-auto grid w-full max-w-7xl gap-12 px-4 pb-18 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-24 lg:pt-20">
                 <div>
                     <p className="font-script text-2xl leading-none text-[color:var(--accent)] sm:text-3xl">
                         {profile.handle}
@@ -29,12 +30,10 @@ export default function HomePage() {
             </section>
             <section
                 id="about"
-                className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
+                className="order-4 mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
             >
                 <SectionHeader
                     eyebrow="About"
-                    title="Kotlin Multiplatform as architecture, not just code sharing"
-                    description="The main interest area is keeping product logic coherent across targets while preserving the strengths of each platform."
                 />
                 <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
                     <div
@@ -118,32 +117,14 @@ export default function HomePage() {
                             ))}
                         </ul>
                     </div>
-                    <div
-                        className="rounded-[1.75rem] border border-[color:var(--border)] bg-[color:var(--surface)] p-6 sm:p-8">
-                        <p className="font-script text-3xl leading-none text-[color:var(--accent)]">
-                            Language
-                        </p>
-                        <ul className="mt-5 flex flex-wrap gap-3">
-                            {profile.languages.map((technology) => (
-                                <li
-                                    key={technology}
-                                    className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-medium text-[color:var(--foreground)]"
-                                >
-                                    {technology}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
                 </div>
             </section>
             <section
                 id="applications"
-                className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
+                className="order-2 mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
             >
                 <SectionHeader
                     eyebrow="Applications"
-                    title="Product work with distinct visual and technical direction"
-                    description="Each application uses its own renderer so the homepage can stay maintainable while the projects still look intentionally different."
                 />
                 <div className="mt-10 grid gap-8">
                     {applicationProjects.map((project) => (
@@ -154,12 +135,10 @@ export default function HomePage() {
 
             <section
                 id="libraries"
-                className="mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
+                className="order-3 mx-auto w-full max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
             >
                 <SectionHeader
                     eyebrow="Libraries"
-                    title="Reusable Kotlin modules with explicit API boundaries"
-                    description="Library cards stay more technical: supported platforms, API sketch and direct repository/documentation links."
                 />
                 <div className="mt-10 grid gap-8">
                     {libraryProjects.map((project) => (

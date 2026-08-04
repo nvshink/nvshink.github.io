@@ -7,9 +7,12 @@ export const profile: DeveloperProfile = {
   summary:
     "I design cross-platform products, local-first workflows and reusable Kotlin libraries for Android and desktop.",
   about: [
-    "I focus on Kotlin Multiplatform as a practical way to share domain logic, keep product quality high and avoid fragmented architecture between platforms.",
-    "My strongest background is Android, but I also care about desktop tooling, local storage, synchronization and developer experience in internal libraries.",
-    "I like products with clear mechanics: offline-first notes, technical utilities, productivity tools and infrastructure that stays maintainable as the codebase grows.",
+    "I am a Kotlin Multiplatform developer. I use it as a practical way to share domain logic, preserve product quality and avoid fragmented architecture across platforms.",
+    "My strongest areas are Android and Ktor, but I also care about desktop tooling. In my work, I strive to refine the UX so users feel that their needs were considered.",
+    "Beyond public projects, I have worked on commercial KMP projects, including:",
+    "• A system for monitoring technological process parameters",
+    "• A corporate messenger and reference directory",
+    "• A system for tracking document reporting and department employee work",
   ],
   programLanguages: [
     "Kotlin",

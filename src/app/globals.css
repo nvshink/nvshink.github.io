@@ -125,6 +125,39 @@ a {
   flex-direction: column;
 }
 
+.locale-toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0.2rem;
+}
+
+.locale-toggle span {
+  position: relative;
+  z-index: 1;
+  border-radius: 9999px;
+  padding: 0.35rem 0.55rem;
+  transition: color 180ms ease;
+}
+
+.locale-toggle__thumb {
+  position: absolute !important;
+  inset: 0.2rem auto 0.2rem 0.2rem;
+  z-index: 0 !important;
+  width: calc(50% - 0.2rem);
+  background: var(--accent);
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.locale-toggle[data-locale="ru"] .locale-toggle__thumb {
+  transform: translateX(100%);
+}
+
+.locale-toggle[data-locale="en"] span:nth-of-type(2),
+.locale-toggle[data-locale="ru"] span:nth-of-type(3) {
+  color: var(--surface);
+}
+
 .joypixels {
   height: 1em;
   width: 1em;

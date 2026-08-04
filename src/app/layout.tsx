@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Cascadia_Code, Elms_Sans, Playwrite_DK_Uloopet } from "next/font/google";
+import localFont from "next/font/local";
+import { Cascadia_Code } from "next/font/google";
 import { CursorMount } from "@/components/cursor";
 import { EmojiReplacer } from "@/components/EmojiReplacer";
 import { Header } from "@/components/layout/Header";
 import { assetPath } from "@/lib/asset-path";
 import "./globals.css";
 
-const headingFont = Playwrite_DK_Uloopet({
+const headingFont = localFont({
+  src: "../../public/fonts/Arbat SHA_3.otf",
   variable: "--font-heading-script",
   display: "swap",
 });
 
-const bodyFont = Elms_Sans({
+const bodyFont = localFont({
+  src: [
+    { path: "../../public/fonts/SSFBreakthrough-Light.ttf", weight: "300" },
+    { path: "../../public/fonts/SSFBreakthrough-Regular.ttf", weight: "400" },
+    { path: "../../public/fonts/SSFBreakthrough-Demibold.ttf", weight: "600" },
+    { path: "../../public/fonts/SSFBreakthrough-Bold.ttf", weight: "700" },
+    { path: "../../public/fonts/SSFBreakthrough-Black.ttf", weight: "900" },
+  ],
   variable: "--font-body-sans",
   display: "swap",
 });
